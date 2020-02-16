@@ -1,0 +1,25 @@
+def bsearch():
+    l=list()
+    u=int(input("enter list size "))
+    for i in range(0,u):
+        y=int(input("enter list element "))
+        l.append(y)
+    l.sort()
+
+    n=0
+
+    m=u-1     #m=5  
+
+    x=int(input("number"))     #x=5, x=6
+
+    while (n<=m):     #yes  ,yes ,yes ,yes ,yes 
+        mid=(n+m)//2  #mid=2  , mid=4, mid=2 ,mid=4 , mid=4
+
+        if(x>l[mid]):  # yes , yes ,yes ,yes
+            n=mid+1       #n=3 ,n=3 n=4 , n=5
+        elif(x<l[mid]):   
+            m=mid-1     
+        else:
+            print("number found at "+str(mid)+" position of list")
+            break        
+    

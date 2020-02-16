@@ -1,0 +1,27 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+p=int(input())
+q=int(input())
+c=0
+for n in range(p,q+1):
+    string_sq=str(n**2)
+    k=len(string_sq)
+        
+    left_sq=string_sq[:len(string_sq)//2] 
+    right_sq=string_sq[len(string_sq)//2:]
+
+    k=int(left_sq) if(left_sq!='') else 0    
+    q=int(right_sq) if(right_sq!='') else 0
+    
+    if(k+q==n):
+        c=c+1
+        print (n,end=" ")
+if(c==0):
+    print("INVALID RANGE")
+
